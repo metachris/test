@@ -1,0 +1,16 @@
+language: python
+python:
+  - "3.6"
+
+env:
+  global:
+    - secure: "JkwfRvUqhKPo1dqSuDIZ+yDYVPzIreAdgsmX7onHu0zt+SPHSSOsv0N93YyO9U5UYXzYjyaqmytElpwSQa6CLHC2i6DlesG5bhr5PkrYWnMbNZ3N0FmWJrErJAUmdhNcbPnCF71/mX1HdnwXqHOtiaR/fh8xVBT+OY1dZRJ06LrS0oe5sb2Y3jtcU1fTTNLKPjzj1ThYkwbG7bob6qRzfck5WszfuiiXmdkEiwmaI+Zlz2b0O/kV+DyHskIRGjT3qlC27vU8eLcDp/tlO6F1SXmbamCM8oh2dJiO4mKkJmrl6+KqXO1vJTUNW8h8FDaWmZPCWFDCvWEPjFQAO4kDF/0F6Wmgxzsy6g89emVJesHxbiF9DTdQlJVcHbeMLvOBj87+7aW9MIs20VO8+41v9hJaruHspm2Zn7neHYc4Hw8VXCrsBJoM7BqjhLzoDZ65XwqNkeVSiFNDRdeyAQ79zYEGrYxoTTTiVn/okRJbQEr9iJDq3dABaE/0PkmnkIhRXDklmWvXJOOCziUzo3aogvLHNArP0Tuc1gQt5jFPosXI9Fcufp82xe+sCykXb5xAqculOnM71L//oAww+SyKKooul5/mU6OzmCvt8JPBlL9T2lyUZIcMFOt5qaxud05JUDCY6pU8VBDHW8bkNrMD+j5wQ1X0Q1YXpf03QkIdxmU="
+
+# command to run tests
+script:
+  - echo $SOMEVAR
+
+deploy:
+  # Deploy to Docker Hub
+  - provider: script
+    script: bash test.sh
