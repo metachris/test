@@ -8,7 +8,8 @@ env:
 
 # command to run tests
 script:
-  - echo $SOMEVAR
+  - echo "somevar:$SOMEVAR"
+  - echo "travisvar:$TRAVISVAR"
 
 deploy:
   # Deploy to Docker Hub
